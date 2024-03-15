@@ -1,0 +1,340 @@
+/* Global Css Start  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+.header_area {
+  max-width: 1178px;
+  width: 100%;
+  margin: 0 auto;
+}
+.header_area nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+  padding: 50px 10px 48px;
+}
+/* .header_area nav .menu ul {
+  gap: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header_area nav .menu li {
+  padding: 10px 30px;
+  border-radius: 10px;
+
+}
+
+.header_area nav .menu li::before {
+  content: "";
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  border-radius: 30px;
+  transition: width 0.3s ease; 
+}
+
+.header_area nav .menu li a {
+  display: block;
+  padding: 0;
+  position: relative;
+  z-index: 22;
+  opacity: 1;
+  color: red;
+} */
+.menu {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 30px 0;
+}
+
+.menu li a {
+  display: block;
+  color: red;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  width: 120px;
+  text-align: center;
+}
+
+.menu .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 100px;
+  transition: all 0.5s ease;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background: #494e57;
+}
+
+::selection {
+  background: rgba(187, 134, 252, 0.5);
+  color: #fff;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  padding: 50px 40px;
+  margin: 0px 20px;
+  border-radius: 12px;
+  background: #22272c;
+  box-shadow: 0px 4px 16px rgba(254, 205, 211, 0.1),
+    0px 8px 24px rgba(254, 205, 211, 0.1),
+    0px 16px 56px rgba(254, 205, 211, 0.1);
+}
+
+.container .topic {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content input {
+  display: none;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20%;
+  margin-right: 50px;
+}
+
+.content .list label {
+  cursor: pointer;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about {
+  color: #22272c;
+}
+
+.content .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #bb86fc;
+}
+
+#home:checked ~ .list .slider {
+  top: 0;
+}
+
+#blog:checked ~ .list .slider {
+  top: 60px;
+}
+
+#help:checked ~ .list .slider {
+  top: 120px;
+}
+
+#code:checked ~ .list .slider {
+  top: 180px;
+}
+
+#about:checked ~ .list .slider {
+  top: 240px;
+}
+
+.content .text-content {
+  width: 80%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content .text {
+  display: none;
+}
+
+.content .text .title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.container .text p {
+  text-align: justify;
+}
+
+.content .text-content .home {
+  display: block;
+}
+
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about {
+  display: block;
+}
+
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home {
+  display: none;
+}
+
+.content .list label:hover {
+  color: #bb86fc;
+}
+.a2n_container > .elementor-container {
+  position: relative;
+}
+.a2n_container > .elementor-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 301px;
+  width: 380px;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  background: linear-gradient(
+    105.52deg,
+    #67afe4 -5.08%,
+    #8388ec 27.08%,
+    #8f72f1 51.96%,
+    #a14cf7 75.79%,
+    #a937fa 106.53%
+  );
+  box-shadow: 0px 10px 40px 0px #0000001a;
+}
+.a2n_container > .elementor-container:has(.a2n_card_1:hover)::before {
+  width: 435px;
+  height: 270px;
+  left: 0;
+  transform: none;
+}
+.a2n_container > .elementor-container:has(.a2n_card_3:hover)::before {
+  width: 435px;
+  height: 270px;
+  left: 100%;
+  transform: translateX(-100%);
+}
+.a2n_card_3:hover .elementor-element svg path,
+.a2n_card_1:hover .elementor-element svg path {
+  transition: all 2s ease;
+}
+.a2n_card_3:hover
+  .elementor-element:not(.elementor-element-7b2f871, .elementor-element-1b27f97)
+  svg
+  path,
+.a2n_card_1:hover
+  .elementor-element:not(.elementor-element-173143d, .elementor-element-371e3a9)
+  svg
+  path {
+  color: #000000;
+  fill: #000000 !important;
+}
+@media (max-width: 767px) {
+  .a2n_container > .elementor-container::before {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 240px;
+    width: 380px;
+  }
+  .a2n_container > .elementor-container:has(.a2n_card_1:hover)::before {
+    height: 240px;
+    width: 380px;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  .a2n_container > .elementor-container:has(.a2n_card_3:hover)::before {
+    height: 240px;
+    width: 380px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+  }
+}
