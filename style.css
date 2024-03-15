@@ -351,7 +351,6 @@ body {
   transition: all 0.5s ease;
   border-radius: 30px;
   overflow: hidden;
-  padding: 86px 51px 36px;
   height: 419px;
   position: relative;
   background-size: cover;
@@ -361,6 +360,8 @@ body {
 .service-area__container:hover .a2n_box:not(:hover) .service_title {
   font-size: 31px;
   line-height: 28.52px;
+  top: 86px;
+  transform: none;
 }
 .a2n_box .service_title {
   font-family: "League Spartan", sans-serif;
@@ -368,17 +369,19 @@ body {
   font-weight: 700;
   line-height: 45px;
   text-align: center;
-  transform: translateY(170%);
+  top: 50%;
+  transform: translateY(-50%);
   transition: all 0.5s ease;
   position: relative;
   z-index: 10;
   color: #ffffff;
 }
 .a2n_box:hover {
-  flex-grow: 10;
+  flex-grow: 5;
 }
 .a2n_box:hover .service_title {
   font-size: 49px;
+  top: 86px;
   transform: translateY(0);
 }
 .a2n_box .service_overlay {
@@ -389,23 +392,20 @@ body {
   height: 100%;
   opacity: 0.8;
 }
-.service_1 {
-  background-image: url(http://162.255.87.117/link/wp-content/uploads/2024/03/service-1.webp);
-  box-shadow: 0px 4px 4px 0px #ffffff40;
-}
-.service_1 .service_overlay {
-  background: #67afe4;
-}
 .a2n_box .service_contents {
   position: absolute;
   opacity: 0;
   top: 150px;
+  right: 52px;
   left: 51px;
   z-index: 15;
   transition: opacity 0.6s ease-in-out;
 }
 .a2n_box:hover .service_contents {
   opacity: 1;
+}
+.a2n_box:not(.service_1) .service_contents {
+  text-align: center;
 }
 .a2n_box .service_contents > p {
   font-family: "League Spartan", sans-serif;
@@ -439,12 +439,32 @@ body {
 .a2n_box .service_contents > a.service_btn > svg {
   padding-left: 2.5px;
 }
-@media (max-width: 1024px) {
-  .a2n_box {
-    padding: 35px;
-  }
-  .a2n_box .service_contents {
-    top: 100px;
-  }
+.service_1 {
+  background-image: url(http://162.255.87.117/link/wp-content/uploads/2024/03/service-1.webp);
+  box-shadow: 0px 4px 4px 0px #ffffff40;
+}
+.service_1 .service_overlay {
+  background: #67afe4;
+}
+.service_2 {
+  background-image: url(http://162.255.87.117/link/wp-content/uploads/2024/03/service-2.webp);
+}
+.service_2 .service_overlay {
+  background: #895ffa;
+  opacity: 0.9;
+}
+.service_3 {
+  background-image: url(http://162.255.87.117/link/wp-content/uploads/2024/03/service_3.webp);
+}
+.service_3 .service_overlay {
+  background: #af23fd;
+}
+.service_4 {
+  background-image: url(http://162.255.87.117/link/wp-content/uploads/2024/03/service_4.webp);
+}
+.service_4 .service_overlay {
+  background: #410662;
+  opacity: 0.7;
 }
 /* service area end  */
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 50%, #000000 100%);
