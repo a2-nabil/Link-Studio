@@ -128,7 +128,7 @@ body {
   align-items: center;
   min-height: 100vh;
 
-  background: #494e57;
+  background: #222222;
 }
 
 ::selection {
@@ -338,3 +338,113 @@ body {
     transform: translate(-50%, -100%);
   }
 }
+
+/* service area start  */
+.service-area__container {
+  display: flex;
+  width: 100%;
+  max-width: 1282px;
+}
+.a2n_box {
+  flex: 1;
+  background-color: lightblue;
+  transition: all 0.5s ease;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 86px 51px 36px;
+  height: 419px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-area__container:hover .a2n_box:not(:hover) .service_title {
+  font-size: 31px;
+  line-height: 28.52px;
+}
+.a2n_box .service_title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 45px;
+  text-align: center;
+  transform: translateY(170%);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+}
+.a2n_box:hover {
+  flex-grow: 10;
+}
+.a2n_box:hover .service_title {
+  font-size: 49px;
+  transform: translateY(0);
+}
+.a2n_box .service_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.service_1 {
+  background-image: url(http://162.255.87.117/link/wp-content/uploads/2024/03/service-1.webp);
+  box-shadow: 0px 4px 4px 0px #ffffff40;
+}
+.service_1 .service_overlay {
+  background: #67afe4;
+}
+.a2n_box .service_contents {
+  position: absolute;
+  opacity: 0;
+  top: 150px;
+  left: 51px;
+  z-index: 15;
+  transition: opacity 0.6s ease-in-out;
+}
+.a2n_box:hover .service_contents {
+  opacity: 1;
+}
+.a2n_box .service_contents > p {
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0 0 20px;
+  color: #ffffff;
+}
+.a2n_box .service_contents ul.service_list {
+  list-style-type: disc;
+  margin: 0;
+}
+.a2n_box .service_contents .service_list li {
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #ffffff;
+}
+.a2n_box .service_contents > a.service_btn {
+  text-align: right;
+  display: block;
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+.a2n_box .service_contents > a.service_btn > svg {
+  padding-left: 2.5px;
+}
+@media (max-width: 1024px) {
+  .a2n_box {
+    padding: 35px;
+  }
+  .a2n_box .service_contents {
+    top: 100px;
+  }
+}
+/* service area end  */
